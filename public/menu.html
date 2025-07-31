@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Menú de Gestión de Productos</title>
+  <script src="../controllers/menu.js"></script>
+  <!-- 
+  <script>
+    if (!localStorage.getItem('token')) {
+      window.location.href = 'login.html';
+    }
+  </script> -->
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="container py-5">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="menu.html">CRUD Productos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <h1 class="text-center mb-4">Gestión de Productos - CRUD</h1>
+
+  <div class="menu">
+    <a href="registrarProducto.html">Registrar Producto</a>
+    <a href="actualizarProducto.html">Actualizar Producto</a>
+    <a href="eliminarProducto.html">Eliminar Producto</a>
+    <a href="listarProductos.html">Listar Productos</a>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <div class="text-end mt-4">
+    <button class="btn btn-outline-danger" onclick="logout()">
+      <i class="bi bi-box-arrow-right me-1"></i>Cerrar sesión
+    </button>
+  </div>
+
+
+  <!--   <script>
+    function logout() {
+      localStorage.clear();
+      window.location.href = 'login.html';
+    }
+  </script> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Actualizar Producto</title>
+</head>
+
+<body class="container py-5">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="menu.html">CRUD Productos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <h2 class="text-center mb-4">Buscar y Actualizar Producto</h2>
+
+  <form class="mb-4" id="buscarForm">
+    <label for="buscarId">ID del producto:</label><br>
+    <input type="number" id="buscarId" required>
+    <button type="button" class="btn btn-primary mt-3" onclick="buscarProducto()">Buscar</button>
+  </form>
+
+  <div id="productoFormContainer" style="display:none; margin-top: 20px;">
+    <form class="mb-4" id="productoForm">
+      <input type="hidden" id="id" name="id">
+
+      <label for="nombre">Nombre del producto:</label><br>
+      <input type="text" id="nombre" name="nombre" disabled><br><br>
+
+      <label for="descripcion">Descripción:</label><br>
+      <textarea id="descripcion" name="descripcion" disabled></textarea><br><br>
+
+      <label for="precio">Nuevo Precio:</label><br>
+      <input type="number" step="0.01" id="precio" name="precio" required><br><br>
+
+      <button type="button" class="btn btn-primary mt-3" onclick="actualizarProducto()">Actualizar</button>
+    </form>
+  </div>
+
+  <script src="../controllers/actualizarProducto.js"> </script>
+  <br><a href="menu.html"
+    style="display:inline-block;margin-top:30px;padding:10px 20px;background:#28a745;color:white;text-decoration:none;border-radius:5px;">Volver
+    al menú</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Eliminar Producto</title>
+</head>
+
+<body class="container py-5">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="menu.html">CRUD Productos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <h2 class="text-center mb-4">Eliminar Producto</h2>
+
+  <form class="mb-4" id="buscarForm">
+    <label for="buscarId">ID del producto a eliminar:</label><br>
+    <input type="number" id="buscarId" required>
+    <button type="button" class="btn btn-primary mt-3" onclick="buscarProducto()">Buscar</button>
+  </form>
+
+  <div id="productoInfo" style="display:none; margin-top: 20px;">
+    <h3>Producto encontrado</h3>
+    <p><strong>ID:</strong> <span id="infoId"></span></p>
+    <p><strong>Nombre:</strong> <span id="infoNombre"></span></p>
+    <p><strong>Descripción:</strong> <span id="infoDescripcion"></span></p>
+    <p><strong>Precio:</strong> $<span id="infoPrecio"></span></p>
+    <button onclick="eliminarProducto()">Eliminar producto</button>
+  </div>
+
+  <script src="../controllers/eliminarProducto.js" defer>    </script>
+  <br><a href="menu.html"
+    style="display:inline-block;margin-top:30px;padding:10px 20px;background:#28a745;color:white;text-decoration:none;border-radius:5px;">Volver
+    al menú</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmModalLabel">Confirmar Eliminación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro de que deseas eliminar este producto?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" onclick="confirmarEliminacion()">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
