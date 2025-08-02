@@ -15,8 +15,8 @@ connection.connect(async (err) => {
   }
   console.log('Conectado a la base de datos');
 
-  const username = 'user';
-  const plainPassword = 'user123';
+  const username = 'cliente';
+  const plainPassword = 'cliente123';
 
   try {
     const hashedPassword = await bcrypt.hash(plainPassword, 10);
